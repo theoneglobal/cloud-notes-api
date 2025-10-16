@@ -1,0 +1,39 @@
+{
+  "name": "cloud-notes-api",
+  "version": "1.0.0",
+  "description": "Serverless notes API using AWS Lambda, CDK, and MongoDB Atlas",
+  "main": "lambda/handler.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "start": "ts-node lambda/handler.ts",
+    "cdk-deploy": "cdk deploy",
+    "cdk-diff": "cdk diff",
+    "cdk-destroy": "cdk destroy",
+    "test": "jest",
+    "simulate": "ts-node lambda/test.ts"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.120.0",
+    "constructs": "^10.3.0",
+    "dotenv": "^16.6.1",
+    "mongodb": "^6.20.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.156",
+    "@types/jest": "^30.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.0",
+    "jest": "^30.2.0",
+    "prettier": "^3.6.2",
+    "ts-jest": "^29.4.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.2"
+  }
+}
